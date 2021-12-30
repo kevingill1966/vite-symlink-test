@@ -1,0 +1,17 @@
+{
+  "name": "workspace-a",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "vite-plugin-vue2": "^1.4.0",
+    "vue": "^2.6.12",
+    "workspace-b": "0.1.0"
+  },
+  "devDependencies": {
+    "vite": "^2.0.5"
+  }
+}

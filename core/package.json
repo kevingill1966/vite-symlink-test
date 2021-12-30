@@ -1,0 +1,8 @@
+{
+	"name": "frontend",
+	"workspaces": [
+		"workspace-a",
+		"workspace-b",
+		"workspace-c"
+	]
+}
