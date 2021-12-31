@@ -1,7 +1,7 @@
 import Vue from "vue";
 
 function b() {
-	alert("BBB");
+	window.console.log("BBB");
 	return Vue;
 }
 

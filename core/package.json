@@ -4,5 +4,8 @@
 		"workspace-a",
 		"workspace-b",
 		"workspace-c"
-	]
+	],
+	"devDependencies": {
+		"@rollup/plugin-node-resolve": "^13.1.2"
+	}
 }

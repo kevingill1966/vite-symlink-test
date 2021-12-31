@@ -58,3 +58,34 @@ How to reproduce this.
         cd workspace-a
 
         npm run build
+
+I resolved this problem using the "node-resolve" plugin.
+
+::
+
+  const { createVuePlugin } = require('vite-plugin-vue2');
+  const { nodeResolve } = require('@rollup/plugin-node-resolve');
+  const path = require('path');
+
+  module.exports = {
+    plugins: [
+      nodeResolve({
+        moduleDirectories: ["../node_modules", path.join(process.cwd(), '../node_modules')]
+      }),
+      createVuePlugin({
+      })
+    ],
+  };
+
+I also had to add explicit host/port to the vite commands. Otherwise they are executed on localhost
+in the docker container, and so invisible outside.
+
+::
+
+  "scripts": {
+    "dev": "vite --port=3000 --host=0.0.0.0",
+    "build": "vite build",
+    "serve": "vite preview --port=3000 --host=0.0.0.0"
+  },
+  "dependencies": {
+
